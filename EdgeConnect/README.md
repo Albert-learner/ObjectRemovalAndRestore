@@ -61,7 +61,7 @@ python train.py --model [stage] --checkpoints [path to checkpoints]
 
 For example to train the edge model on Places2 dataset under `./checkpoints/places2` directory:
 ```bash
-python train.py --model 1 --checkpoints ./checkpoints/places2
+python train.py --model 1 --checkpoints ./test_checkpoints/places2
 ```
 
 Convergence of the model differs from dataset to dataset. For example Places2 dataset converges in one of two epochs, while smaller datasets like CelebA require almost 40 epochs to converge. You can set the number of training iterations by changing `MAX_ITERS` value in the configuration file.
@@ -82,12 +82,12 @@ python test.py \
 We provide some test examples under `./examples` directory. Please download the [pre-trained models](#getting-started) and run:
 ```bash
 python test.py \
-  --checkpoints ./checkpoints/places2 
+  --checkpoints ./test_checkpoints/places2 
   --input ./examples/places2/images 
   --mask ./examples/places2/masks
-  --output ./checkpoints/results
+  --output ./test_checkpoints/results
 ```
-This script will inpaint all images in `./examples/places2/images` using their corresponding masks in `./examples/places2/mask` directory and saves the results in `./checkpoints/results` directory. By default `test.py` script is run on stage 3 (`--model=3`).
+This script will inpaint all images in `./examples/places2/images` using their corresponding masks in `./examples/places2/mask` directory and saves the results in `./test_checkpoints/results` directory. By default `test.py` script is run on stage 3 (`--model=3`).
 
 ### 3) Evaluating
 To evaluate the model, you need to first run the model in [test mode](#testing) against your validation set and save the results on disk. We provide a utility [`./scripts/metrics.py`](scripts/metrics.py) to evaluate the model using PSNR, SSIM and Mean Absolute Error:
