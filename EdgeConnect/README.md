@@ -42,7 +42,7 @@ Alternatively, you can download [Quick Draw Irregular Mask Dataset](https://gith
 Please use [`scripts/flist.py`](scripts/flist.py) to generate train, test and validation set masks file lists as explained above.
 
 ## Getting Started
-Download the pre-trained models using the following links and copy them under `./checkpoints` directory.
+Download the pre-trained models using the following links and copy them under `./test_checkpoints` directory.
 
 [Places2](https://drive.google.com/drive/folders/1KyXz4W4SAvfsGh3NJ7XgdOv5t46o-8aa) | [CelebA](https://drive.google.com/drive/folders/1nkLOhzWL-w2euo0U6amhz7HVzqNC5rqb) | [Paris-StreetView](https://drive.google.com/drive/folders/1cGwDaZqDcqYU7kDuEbMXa9TP3uDJRBR1)
 
